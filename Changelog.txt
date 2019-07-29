@@ -1,0 +1,7 @@
+JavaByte Socket terminal Changelog
+
+07/28/2019	
+1.0.01a
+	Added logoff.
+	Added menu fixes.
+	Added logon.

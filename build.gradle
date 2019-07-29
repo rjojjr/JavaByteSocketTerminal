@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+}
+
+group 'com.kirchnersolutions.javabyte.sockettest'
+version '1.0.01a'
+
+sourceCompatibility = 1.8
+
+repositories {
+    flatDir {
+        dirs "$rootProject.projectDir/libs"
+    }
+    mavenCentral()
+}
+
+if (!hasProperty('mainClass')) {
+    ext.mainClass = 'javabyte.socket.test.Main'
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile name: 'JavaByteDriver-1.0.02a'
+}
+
+jar {
+    manifest {
+        attributes(
+                'Class-Path': configurations.compile.collect{it.toURI().toString()}.join(' '),
+                'Main-Class': 'javabyte.socket.test.Main')
+    }
+}
