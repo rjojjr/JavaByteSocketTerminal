@@ -9,15 +9,16 @@ class PrintResults {
     static void printResult(DatabaseResults results){
         if(results.isSuccess()){
             System.out.println("Request was successful");
-            for(Map<String, String> result : results.getResults()){
+            for(Object result: results.getResults()){
                 String out = "";
+                Map<String, String> res = (Map<String, String>)result;
                 boolean first = true;
-                for(String key : result.keySet()){
+                for(String key : res.keySet()){
                     if(first){
-                        out = key + " = " + result.get(key);
+                        out = key + " = " + res.get(key);
                         first = false;
                     }else{
-                        out+= " : " + key + " = " + result.get(key);
+                        out+= " : " + key + " = " + res.get(key);
                     }
                 }
                 System.out.println(out);

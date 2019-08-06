@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'com.kirchnersolutions.javabyte.sockettest'
-version '1.0.01a'
+version '1.0.02a'
 
 sourceCompatibility = 1.8
 
@@ -20,7 +20,7 @@ if (!hasProperty('mainClass')) {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
-    compile name: 'JavaByteDriver-1.0.02a'
+    compile name: 'JavaByteDriver-1.0.02'
 }
 
 jar {

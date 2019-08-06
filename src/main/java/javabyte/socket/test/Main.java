@@ -3,7 +3,6 @@ package javabyte.socket.test;
 import kirchnersolutions.javabyte.driver.common.driver.DatabaseResults;
 import kirchnersolutions.javabyte.driver.common.driver.Transaction;
 import kirchnersolutions.javabyte.driver.common.utilities.ByteTools;
-import kirchnersolutions.javabyte.driver.common.utilities.CryptTools;
 import kirchnersolutions.javabyte.driver.singleclient.SingleClient;
 
 import java.io.File;
